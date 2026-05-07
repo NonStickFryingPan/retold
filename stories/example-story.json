@@ -32,9 +32,9 @@
       "text": "You climb the moss-covered steps, each one worn smooth by centuries of footsteps and rain. The sound of water grows louder with every step.\n\nAt the top, you find a clearing with a waterfall cascading into a crystal pool. Beside the pool sits a crumbling stone shrine. An old sword rests against it, its blade still gleaming despite the rust on its hilt.",
       "isStart": false,
       "choices": [
-        { "label": "Take the sword", "nextNodeId": 7 },
-        { "label": "Drink from the pool", "nextNodeId": 8 },
-        { "label": "Descend back to the fork", "nextNodeId": 1 }
+        { "label": "Take the sword", "nextNodeId": 7, "setFlag": "hasSword", "requireFlag": null, "unsetFlag": null },
+        { "label": "Drink from the pool", "nextNodeId": 8, "setFlag": "hasVision", "requireFlag": null, "unsetFlag": null },
+        { "label": "Descend back to the fork", "nextNodeId": 1, "setFlag": null, "requireFlag": null, "unsetFlag": null }
       ]
     },
     {
@@ -71,8 +71,10 @@
       "text": "Your fingers close around the hilt. Despite the rust, the grip feels warm — alive. The blade hums with an ancient song.\n\nAs you lift it, the waterfall seems to pause for just a moment. The shrine crumbles further, as if releasing its hold on something.\n\nYou feel stronger. You feel ready. Whatever waits in this forest, you are no longer unarmed.",
       "isStart": false,
       "choices": [
-        { "label": "Continue deeper into the forest", "nextNodeId": 12 },
-        { "label": "Return to the fork", "nextNodeId": 1 }
+        { "label": "Continue deeper into the forest", "nextNodeId": 12, "setFlag": null, "requireFlag": null, "unsetFlag": null },
+        { "label": "Read the carvings with your newfound sight", "nextNodeId": 10, "setFlag": null, "requireFlag": "hasVision", "unsetFlag": null },
+        { "label": "Return to the fork", "nextNodeId": 1, "setFlag": null, "requireFlag": null, "unsetFlag": null },
+        { "label": "Hurl the sword into the waterfall", "nextNodeId": 3, "setFlag": null, "requireFlag": "hasSword", "unsetFlag": "hasSword" }
       ]
     },
     {

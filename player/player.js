@@ -1,5 +1,5 @@
 import { story, currentNodeId, flags, history, subscribe, resetState, getCurrentNode, setCurrentNodeId, setFlags } from './modules/state.js';
-import { goToNode, getAvailableChoices, isEnding, startGame } from './modules/engine.js';
+import { goToNode, applyChoiceFlags, getAvailableChoices, isEnding, startGame } from './modules/engine.js';
 import { renderTitleScreen, renderGameScreen, renderEndScreen } from './modules/renderer.js';
 import { saveProgress, loadProgress, hasSave, clearSave } from './modules/saves.js';
 import { loadFromFile, loadFromObject } from './modules/loader.js';
@@ -120,6 +120,11 @@ function setupGameButtons() {
     btn.addEventListener('click', (e) => {
       const nextId = parseInt(btn.dataset.nextId);
       if (!isNaN(nextId)) {
+        const setFlag = btn.dataset.setFlag || null;
+        const unsetFlag = btn.dataset.unsetFlag || null;
+        if (setFlag || unsetFlag) {
+          applyChoiceFlags({ setFlag, unsetFlag });
+        }
         goToNode(nextId);
         saveProgress();
       }

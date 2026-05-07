@@ -1,4 +1,13 @@
-import { story, currentNodeId, flags, history, setCurrentNodeId, pushHistory, setFlag } from './state.js';
+import { story, currentNodeId, flags, history, setCurrentNodeId, pushHistory, setFlag, unsetFlag } from './state.js';
+
+export function applyChoiceFlags(choice) {
+  if (choice.setFlag) {
+    setFlag(choice.setFlag, true);
+  }
+  if (choice.unsetFlag) {
+    unsetFlag(choice.unsetFlag);
+  }
+}
 
 export function goToNode(nodeId) {
   if (!story || !story.nodes) return false;
@@ -8,12 +17,6 @@ export function goToNode(nodeId) {
 
   pushHistory(currentNodeId);
   setCurrentNodeId(nodeId);
-
-  for (const choice of target.choices || []) {
-    if (choice.setFlag) {
-      setFlag(choice.setFlag, true);
-    }
-  }
 
   return true;
 }

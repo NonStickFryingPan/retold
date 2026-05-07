@@ -227,6 +227,20 @@
 .choice-dest-select {
   font-size: 12px !important;
 }
+.choice-flags {
+  display: flex;
+  gap: 4px;
+}
+.choice-flag-input {
+  font-size: 10px !important;
+  padding: 3px 6px !important;
+  flex: 1;
+  min-width: 0;
+}
+.choice-flag-input::placeholder {
+  font-size: 10px;
+  opacity: 0.45;
+}
 
 .no-choices {
   font-family: var(--font-display);

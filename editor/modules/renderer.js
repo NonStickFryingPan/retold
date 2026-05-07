@@ -47,6 +47,11 @@ export function renderEditPanel(node, allNodes) {
           <select class="select choice-dest-select" data-choice-field="nextNodeId">
             ${destOptions}
           </select>
+          <div class="choice-flags">
+            <input type="text" class="input choice-flag-input" value="${escapeHTML(choice.setFlag || '')}" placeholder="Sets flag..." data-choice-field="setFlag">
+            <input type="text" class="input choice-flag-input" value="${escapeHTML(choice.unsetFlag || '')}" placeholder="Clears flag..." data-choice-field="unsetFlag">
+            <input type="text" class="input choice-flag-input" value="${escapeHTML(choice.requireFlag || '')}" placeholder="Requires flag..." data-choice-field="requireFlag">
+          </div>
         </div>
         <button class="btn btn-ghost btn-sm btn-icon choice-delete-btn" data-choice-action="delete" title="Delete choice">&times;</button>
       </div>`;

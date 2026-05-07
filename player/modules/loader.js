@@ -51,6 +51,7 @@ export function normalizeStory(data) {
         label: c.label || '',
         nextNodeId: typeof c.nextNodeId === 'number' ? c.nextNodeId : null,
         setFlag: c.setFlag || null,
+        unsetFlag: c.unsetFlag || null,
         requireFlag: c.requireFlag || null
       }))
     }))

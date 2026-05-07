@@ -15,7 +15,10 @@ export function buildStoryJSON() {
       isStart: n.isStart,
       choices: n.choices.map(c => ({
         label: c.label,
-        nextNodeId: c.nextNodeId
+        nextNodeId: c.nextNodeId,
+        setFlag: c.setFlag || null,
+        unsetFlag: c.unsetFlag || null,
+        requireFlag: c.requireFlag || null
       }))
     }))
   };
@@ -49,7 +52,10 @@ export function loadFromData(data) {
     isStart: n.isStart === true || (n.id === data.startNodeId),
     choices: Array.isArray(n.choices) ? n.choices.map(c => ({
       label: c.label || '',
-      nextNodeId: typeof c.nextNodeId === 'number' ? c.nextNodeId : null
+      nextNodeId: typeof c.nextNodeId === 'number' ? c.nextNodeId : null,
+      setFlag: c.setFlag || null,
+      unsetFlag: c.unsetFlag || null,
+      requireFlag: c.requireFlag || null
     })) : []
   }));
 

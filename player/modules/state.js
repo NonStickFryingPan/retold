@@ -38,6 +38,11 @@ export function setFlag(key, value) {
   notify();
 }
 
+export function unsetFlag(key) {
+  delete flags[key];
+  notify();
+}
+
 export function setFlags(newFlags) {
   flags = { ...newFlags };
   notify();
