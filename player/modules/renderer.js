@@ -33,15 +33,9 @@ export function renderGameScreen(node, allNodes, flags) {
   const isEnd = availableChoices.length === 0;
 
   const choicesHTML = availableChoices.map((choice, i) => {
-    const dest = choice.nextNodeId !== null && choice.nextNodeId !== undefined
-      ? allNodes.find(n => n.id === choice.nextNodeId)
-      : null;
-    const destLabel = dest ? `${dest.id}. ${dest.title}` : '';
-
     return `
       <button class="choice-btn" data-choice-index="${i}" data-next-id="${choice.nextNodeId ?? ''}" data-set-flag="${escapeHTML(choice.setFlag || '')}" data-unset-flag="${escapeHTML(choice.unsetFlag || '')}">
         <span class="choice-label">${escapeHTML(choice.label)}</span>
-        ${dest ? `<span class="choice-dest">\u2192 ${escapeHTML(destLabel)}</span>` : ''}
       </button>`;
   }).join('');
 
