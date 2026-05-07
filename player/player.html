@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Retold — Story Player</title>
+  <link rel="stylesheet" href="../shared/theme.css">
+  <link rel="stylesheet" href="../shared/components.css">
+  <link rel="stylesheet" href="player.css">
+</head>
+<body>
+  <div class="player-layout">
+    <header class="player-topbar">
+      <a href="../index.html" class="player-topbar-logo">
+        <img src="../assets/logo.svg" alt="Retold">
+        <span class="player-topbar-brand">RETOLD</span>
+      </a>
+      <span class="player-topbar-spacer"></span>
+      <span class="player-topbar-title" id="topbar-title"></span>
+      <button class="btn btn-ghost btn-sm" id="btn-menu" style="display:none">Menu</button>
+    </header>
+
+    <main class="player-main" id="player-main">
+      <div class="story-loader" id="story-loader">
+        <p>No story loaded.</p>
+        <button class="btn btn-primary btn-lg" id="btn-load-first">Load Story</button>
+      </div>
+    </main>
+  </div>
+
+  <input type="file" accept=".json" class="hidden-file-input" id="load-file" style="display:none">
+
+  <script type="module" src="player.js"></script>
+</body>
+</html>

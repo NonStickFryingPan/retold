@@ -1,0 +1,260 @@
+{
+  "title": "The Knight Who Lived",
+  "version": "1.0",
+  "author": "Luqman",
+  "startNodeId": 1,
+  "nodes": [
+    {
+      "id": 1,
+      "title": "The Throne Room",
+      "text": "You reek of fraud and dried moat-shit. The King sits on his throne, beaming at you.\n\n\"Sir Coward, the realm sings of your bravery! Driving off the Dreadwyrm with nothing but a rusty spoon! Now, take this 500 gold expedition fund, march to its lair, and bring me its head.\"\n\nYou nod, sweating profusely. You are totally fucked. You leave the castle with a heavy coin purse.",
+      "isStart": true,
+      "choices": [
+        { "label": "Stride to the Royal Armorer to bluff your way into enchanted gear", "nextNodeId": 2 },
+        { "label": "Head to the Rusty Flagon to hire a psychopath to do the dying for you", "nextNodeId": 6 },
+        { "label": "Fuck the dragon. Take the 500 gold and make a break for the docks", "nextNodeId": 9 }
+      ]
+    },
+    {
+      "id": 2,
+      "title": "The Royal Armorer",
+      "text": "The Armorer squints at you. \"The dragonslayer. You don't look that tough up close.\"\n\nHe guards the King's finest stash, including the legendary Dragonbane Lance.",
+      "isStart": false,
+      "choices": [
+        { "label": "Puff out your chest. \"Do you want to explain to the King why his champion fought bare-handed?\"", "nextNodeId": 3 },
+        { "label": "Break down crying and offer him 200 gold to just give you something shiny", "nextNodeId": 4 },
+        { "label": "Stutter and trip over your own scabbard", "nextNodeId": 5 }
+      ]
+    },
+    {
+      "id": 3,
+      "title": "Armed and Dangerous",
+      "text": "The Armorer pales. \"My apologies, my lord!\" He hands you the glowing Dragonbane Lance. It hums with lethal, ancient power. You feel 10% less likely to shit yourself.\n\nYou hit the road.",
+      "isStart": false,
+      "choices": [
+        { "label": "March toward the Dragon's Mountain", "nextNodeId": 11 }
+      ]
+    },
+    {
+      "id": 4,
+      "title": "Pay to Win",
+      "text": "He snatches the gold and tosses you a set of heavy, flame-retardant plate armor. \"We never spoke,\" he grunts.\n\nYou head out with 300 gold left and armor too heavy for your frail frame.",
+      "isStart": false,
+      "choices": [
+        { "label": "Waddle toward the Dragon's Mountain", "nextNodeId": 12 }
+      ]
+    },
+    {
+      "id": 5,
+      "title": "The Jig is Up",
+      "text": "The Armorer crosses his arms. \"You're full of shit. The real hero was seven feet tall.\"\n\nHe signals the Royal Guards.",
+      "isStart": false,
+      "choices": [
+        { "label": "Try to run", "nextNodeId": 25 }
+      ]
+    },
+    {
+      "id": 6,
+      "title": "The Rusty Flagon",
+      "text": "The tavern smells of cheap ale and expensive violence. In the corner sits Bronn the Cutthroat, a mercenary who has killed men for looking at his soup wrong.",
+      "isStart": false,
+      "choices": [
+        { "label": "Offer him 300 gold to kill the dragon while you watch", "nextNodeId": 7 },
+        { "label": "Get drunk instead to calm your nerves", "nextNodeId": 8 }
+      ]
+    },
+    {
+      "id": 7,
+      "title": "The Muscle",
+      "text": "Bronn bites the gold coins, grunts, and readies his greatsword. \"Lead the way, 'hero'.\"\n\nYou hit the road, safely hiding behind him.",
+      "isStart": false,
+      "choices": [
+        { "label": "March to the Dragon's Mountain", "nextNodeId": 13 }
+      ]
+    },
+    {
+      "id": 8,
+      "title": "A Bad Start",
+      "text": "You spend 50 gold on black-market rum. You wake up in a ditch 12 hours later with a splitting headache, no mercenary, and only 450 gold.\n\nTime to go.",
+      "isStart": false,
+      "choices": [
+        { "label": "Stumble toward the Dragon's Mountain", "nextNodeId": 14 }
+      ]
+    },
+    {
+      "id": 9,
+      "title": "The Coward's Run",
+      "text": "You sprint to the docks. A smuggler's galleon is prepping to sail for the Summer Isles, where they don't have dragons, only coconuts.",
+      "isStart": false,
+      "choices": [
+        { "label": "Bribe the captain with all 500 gold for passage", "nextNodeId": 28 },
+        { "label": "Try to sneak aboard inside a barrel", "nextNodeId": 10 }
+      ]
+    },
+    {
+      "id": 10,
+      "title": "Bad Cargo",
+      "text": "The crew finds you. They strip you of your gold and hand you over to the Harbor Patrol as a stowaway.",
+      "isStart": false,
+      "choices": [
+        { "label": "Accept your fate", "nextNodeId": 25 }
+      ]
+    },
+    {
+      "id": 11,
+      "title": "Goblin Road",
+      "text": "Halfway up the mountain, three goblins drop from the trees, daggers drawn!",
+      "isStart": false,
+      "choices": [
+        { "label": "Swing the Dragonbane Lance at them!", "nextNodeId": 15 }
+      ]
+    },
+    {
+      "id": 12,
+      "title": "Goblin Road",
+      "text": "Halfway up the mountain, three goblins drop from the trees, daggers drawn!",
+      "isStart": false,
+      "choices": [
+        { "label": "Let them stab you", "nextNodeId": 16 }
+      ]
+    },
+    {
+      "id": 13,
+      "title": "Goblin Road",
+      "text": "Halfway up the mountain, three goblins drop from the trees.",
+      "isStart": false,
+      "choices": [
+        { "label": "Hide behind Bronn", "nextNodeId": 17 }
+      ]
+    },
+    {
+      "id": 14,
+      "title": "Goblin Road",
+      "text": "Halfway up the mountain, three goblins drop from the trees. You have no armor, no lance, and a hangover.",
+      "isStart": false,
+      "choices": [
+        { "label": "Throw your coin purse at them as a distraction and sprint past!", "nextNodeId": 18 }
+      ]
+    },
+    {
+      "id": 15,
+      "title": "Dragon's Maw",
+      "text": "You vaporized the goblins with one swing. You stand before the yawning, sulfur-smelling cave of the Dreadwyrm. You are armed with a weapon of mass destruction.",
+      "isStart": false,
+      "choices": [
+        { "label": "Charge in screaming to finish this", "nextNodeId": 19 }
+      ]
+    },
+    {
+      "id": 16,
+      "title": "Dragon's Maw",
+      "text": "Their daggers broke against your flame-retardant armor. They ran away. You stand before the cave, encased in heavy steel.",
+      "isStart": false,
+      "choices": [
+        { "label": "Clank your way inside", "nextNodeId": 20 }
+      ]
+    },
+    {
+      "id": 17,
+      "title": "Dragon's Maw",
+      "text": "Bronn decapitates all three in five seconds. He wipes his blade. \"Alright, let's kill a lizard.\"\n\nYou enter the cave.",
+      "isStart": false,
+      "choices": [
+        { "label": "Tell Bronn to attack the sleeping beast", "nextNodeId": 21 }
+      ]
+    },
+    {
+      "id": 18,
+      "title": "Dragon's Maw",
+      "text": "You are broke, unarmored, and terrified. But you made it to the cave. The dragon is asleep on a massive pile of treasure.",
+      "isStart": false,
+      "choices": [
+        { "label": "Try to sneak in and steal a single gem to prove you were here", "nextNodeId": 23 },
+        { "label": "Trip over a fucking stalagmite", "nextNodeId": 24 }
+      ]
+    },
+    {
+      "id": 19,
+      "title": "The Final Showdown",
+      "text": "The dragon roars, rearing back to breathe a pillar of hellfire. You panic.",
+      "isStart": false,
+      "choices": [
+        { "label": "Throw the Lance at its stupid face!", "nextNodeId": 27 }
+      ]
+    },
+    {
+      "id": 20,
+      "title": "Oven Baked",
+      "text": "The dragon wakes up. It breathes fire. Your flame-retardant armor protects you from the flames, but the metal instantly heats up to 500 degrees.",
+      "isStart": false,
+      "choices": [
+        { "label": "Oh no", "nextNodeId": 26 }
+      ]
+    },
+    {
+      "id": 21,
+      "title": "Betrayal",
+      "text": "Bronn looks at the size of the dragon. He looks back at you. \"Yeah, no. I'm not fighting that.\"",
+      "isStart": false,
+      "choices": [
+        { "label": "\"I'll double your pay!\"", "nextNodeId": 22 },
+        { "label": "Run away!", "nextNodeId": 24 }
+      ]
+    },
+    {
+      "id": 22,
+      "title": "Kick the Chicken",
+      "text": "\"I've got a better idea,\" Bronn says. He kicks you square in the back, sending you tumbling into the dragon's nose. The beast wakes up. Bronn sprints out with your gold.",
+      "isStart": false,
+      "choices": [
+        { "label": "Beg for mercy", "nextNodeId": 26 }
+      ]
+    },
+    {
+      "id": 23,
+      "title": "The Thief",
+      "text": "You successfully pocket a diamond the size of your head. The dragon snores on.",
+      "isStart": false,
+      "choices": [
+        { "label": "Tiptoe out and walk back to the docks", "nextNodeId": 28 }
+      ]
+    },
+    {
+      "id": 24,
+      "title": "Awakened",
+      "text": "The noise echoes. A massive, reptilian eye snaps open. You stare down the gullet of an apex predator.",
+      "isStart": false,
+      "choices": [
+        { "label": "Cry", "nextNodeId": 26 }
+      ]
+    },
+    {
+      "id": 25,
+      "title": "ENDING: THE CELL",
+      "text": "You are thrown into the Royal Dungeons for fraud and treason. You spend the rest of your life eating moldy bread and telling the rats about how you totally survived a dragon once.\n\n(BAD END)",
+      "isStart": false,
+      "choices": []
+    },
+    {
+      "id": 26,
+      "title": "ENDING: EXTRA CRISPY",
+      "text": "You are incinerated instantly. The King builds a beautiful statue in your honor, entirely unaware you died screaming and crying.\n\n(DEATH END)",
+      "isStart": false,
+      "choices": []
+    },
+    {
+      "id": 27,
+      "title": "ENDING: THE CANON LEGEND",
+      "text": "You throw the Dragonbane Lance like a javelin. It misses the dragon entirely, bounces off the cave wall, and shatters a load-bearing stalactite. The entire cave roof collapses, crushing the dragon instantly.\n\nYou crawl out of the rubble, completely unharmed. The realm hails you as the greatest warrior in history. You hate your life.\n\n(TRUE END)",
+      "isStart": false,
+      "choices": []
+    },
+    {
+      "id": 28,
+      "title": "ENDING: PINA COLADAS",
+      "text": "You take the gold/diamond and sail across the world. You open a beachside tavern in the Summer Isles. Sometimes you hear rumors of a dragon burning down your old kingdom, but frankly, that sounds like a 'them' problem.\n\n(SECRET END)",
+      "isStart": false,
+      "choices": []
+    }
+  ]
+}

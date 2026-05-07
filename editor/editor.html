@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Retold — Story Editor</title>
+  <link rel="stylesheet" href="../shared/theme.css">
+  <link rel="stylesheet" href="../shared/components.css">
+  <link rel="stylesheet" href="editor.css">
+</head>
+<body>
+  <div class="editor-layout">
+    <header class="editor-topbar">
+      <a href="../index.html" class="editor-topbar-logo">
+        <img src="../assets/logo.svg" alt="Retold">
+        <span class="editor-topbar-brand">RETOLD</span>
+      </a>
+      <span class="editor-topbar-sep">|</span>
+      <span class="editor-topbar-label">Story Editor</span>
+      <div class="editor-topbar-spacer"></div>
+      <input type="text" class="input editor-topbar-title" id="story-title" placeholder="Story Title..." value="Untitled Story">
+      <button class="btn btn-primary" id="btn-export">Export JSON</button>
+      <button class="btn btn-secondary" id="btn-import">Import JSON</button>
+      <button class="btn btn-secondary" id="btn-new">New Story</button>
+    </header>
+
+    <div class="editor-main">
+      <aside class="editor-sidebar">
+        <div class="editor-sidebar-header">
+          <span class="editor-sidebar-title">Nodes</span>
+          <button class="btn btn-primary btn-sm" id="btn-add-node">+ Add Node</button>
+        </div>
+        <div class="editor-node-list" id="node-list"></div>
+      </aside>
+
+      <main class="editor-content" id="edit-panel"></main>
+    </div>
+
+    <footer class="editor-statusbar" id="statusbar">
+      <span id="status-text">Ready</span>
+      <span id="status-warnings" class="editor-statusbar-warnings"></span>
+    </footer>
+  </div>
+
+  <input type="file" accept=".json" class="hidden-file-input" id="import-file">
+
+  <script type="module" src="editor.js"></script>
+</body>
+</html>

@@ -1,0 +1,154 @@
+{
+  "title": "Forest of Echoes",
+  "version": "1.0",
+  "author": "Luqman",
+  "startNodeId": 1,
+  "nodes": [
+    {
+      "id": 1,
+      "title": "Forest Path",
+      "text": "You stand at a fork in the road. Rain drips through the canopy above, each drop a soft percussion on the fallen leaves. The air is thick with the scent of wet earth and pine.\n\nTo your left, the path winds deeper into the dark woods. To your right, stone steps climb toward the sound of running water. Behind you, the way back to the village is still visible through the mist.",
+      "isStart": true,
+      "choices": [
+        { "label": "Go left into the dark woods", "nextNodeId": 2 },
+        { "label": "Climb the stone steps toward the water", "nextNodeId": 3 },
+        { "label": "Turn back to the village", "nextNodeId": 4 }
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Dark Woods",
+      "text": "The trees close in around you, their branches weaving a canopy that blocks out what little light remained. The air grows cold. Somewhere in the darkness, a twig snaps.\n\nYou see a faint glow ahead — perhaps a lantern, or something else entirely. The ground beneath your feet becomes soft and marshy.",
+      "isStart": false,
+      "choices": [
+        { "label": "Follow the glow", "nextNodeId": 5 },
+        { "label": "Call out into the darkness", "nextNodeId": 6 },
+        { "label": "Retreat to the fork", "nextNodeId": 1 }
+      ]
+    },
+    {
+      "id": 3,
+      "title": "Stone Steps",
+      "text": "You climb the moss-covered steps, each one worn smooth by centuries of footsteps and rain. The sound of water grows louder with every step.\n\nAt the top, you find a clearing with a waterfall cascading into a crystal pool. Beside the pool sits a crumbling stone shrine. An old sword rests against it, its blade still gleaming despite the rust on its hilt.",
+      "isStart": false,
+      "choices": [
+        { "label": "Take the sword", "nextNodeId": 7 },
+        { "label": "Drink from the pool", "nextNodeId": 8 },
+        { "label": "Descend back to the fork", "nextNodeId": 1 }
+      ]
+    },
+    {
+      "id": 4,
+      "title": "Back to Village",
+      "text": "You turn back toward the village, the familiar path feeling strangely unfamiliar in the rain. The lights of home flicker in the distance.\n\nBut as you walk, you feel a pull — a whisper on the wind that seems to know your name. The forest is not done with you yet.\n\nPerhaps some adventures are not meant to be walked away from.",
+      "isStart": false,
+      "choices": []
+    },
+    {
+      "id": 5,
+      "title": "The Lantern",
+      "text": "You push through the undergrowth toward the glow. It flickers and dances, casting strange shadows on the trees.\n\nYou find an old woman sitting on a stump, a lantern in her lap. She looks up at you with eyes that seem to hold centuries.\n\n\"I've been waiting,\" she says. \"The forest speaks of you. It says you seek something you cannot name.\"",
+      "isStart": false,
+      "choices": [
+        { "label": "Ask her what she means", "nextNodeId": 10 },
+        { "label": "\"I'm just lost. Can you help me?\"", "nextNodeId": 9 },
+        { "label": "Back away slowly", "nextNodeId": 2 }
+      ]
+    },
+    {
+      "id": 6,
+      "title": "The Call",
+      "text": "Your voice echoes through the trees, then fades into an unnatural silence. Even the rain seems to hold its breath.\n\nA shape moves between the trunks — tall, slender, wrong in ways you cannot name. It does not answer. It simply watches.\n\nYour instincts scream at you to run.",
+      "isStart": false,
+      "choices": [
+        { "label": "Run back to the fork", "nextNodeId": 1 },
+        { "label": "Stand your ground", "nextNodeId": 11 }
+      ]
+    },
+    {
+      "id": 7,
+      "title": "The Sword",
+      "text": "Your fingers close around the hilt. Despite the rust, the grip feels warm — alive. The blade hums with an ancient song.\n\nAs you lift it, the waterfall seems to pause for just a moment. The shrine crumbles further, as if releasing its hold on something.\n\nYou feel stronger. You feel ready. Whatever waits in this forest, you are no longer unarmed.",
+      "isStart": false,
+      "choices": [
+        { "label": "Continue deeper into the forest", "nextNodeId": 12 },
+        { "label": "Return to the fork", "nextNodeId": 1 }
+      ]
+    },
+    {
+      "id": 8,
+      "title": "The Pool",
+      "text": "You kneel at the pool's edge and cup the water in your hands. It is impossibly cold and impossibly clear.\n\nAs you drink, visions flood your mind — a temple hidden beneath the roots of the oldest tree, a door that opens only for those who carry the sword, and a darkness that has slept for a thousand years.\n\nYou now know where you must go.",
+      "isStart": false,
+      "choices": [
+        { "label": "Take the sword and follow the vision", "nextNodeId": 7 },
+        { "label": "Return to the fork, shaken", "nextNodeId": 1 }
+      ]
+    },
+    {
+      "id": 9,
+      "title": "Help Offered",
+      "text": "The old woman smiles. \"Lost? No, child. You are exactly where the forest wants you to be. But I will help you, if that is what you truly wish.\"\n\nShe reaches into her cloak and pulls out a small stone that glows with a soft amber light.\n\n\"Follow the oaks with silver leaves. They will lead you to the heart of things.\"",
+      "isStart": false,
+      "choices": [
+        { "label": "Thank her and follow the oaks", "nextNodeId": 12 },
+        { "label": "Ask one more question", "nextNodeId": 10 },
+        { "label": "Take the stone and leave", "nextNodeId": 12 }
+      ]
+    },
+    {
+      "id": 10,
+      "title": "The Truth",
+      "text": "\"What do I seek?\" you ask.\n\nThe old woman's smile fades, replaced by something that might be sorrow or might be hope.\n\n\"You seek the Temple Beneath — the place where the first tree was planted and where the last will fall. You seek answers to questions you have not yet learned to ask. And you seek... yourself. The version of you that exists beyond this forest.\"\n\nShe hands you the glowing stone. \"Go now. The temple doors open at moonrise.\"",
+      "isStart": false,
+      "choices": [
+        { "label": "Follow the oaks toward the temple", "nextNodeId": 12 },
+        { "label": "Return to the fork, overwhelmed", "nextNodeId": 1 }
+      ]
+    },
+    {
+      "id": 11,
+      "title": "Standing Ground",
+      "text": "You plant your feet and stare into the darkness. The shape does not move. Neither do you.\n\nMinutes pass — or perhaps hours. Time feels different here. Finally, the shape speaks. Its voice is like wind through dead leaves.\n\n\"You are brave,\" it says. \"Or foolish. Perhaps both. Pass, then. But know this: the temple tests every soul that enters. Not all return.\"\n\nThe shape dissolves into mist, and a new path opens before you.",
+      "isStart": false,
+      "choices": [
+        { "label": "Take the new path", "nextNodeId": 12 },
+        { "label": "Return to the fork, shaken", "nextNodeId": 1 }
+      ]
+    },
+    {
+      "id": 12,
+      "title": "The Hidden Temple",
+      "text": "You push through the final thicket and emerge into a clearing bathed in silver moonlight. Before you stands the temple — not built, but grown. Roots and branches weave together to form archways and columns. The door is open.\n\nInside, you see the heart of the forest: a single tree, impossibly old, its bark glowing with amber light. At its base sits a stone pedestal. Whatever was meant to be placed there has been missing for an age.\n\nThe air thrums with power. You have found what you were looking for — even if you cannot name it.",
+      "isStart": false,
+      "choices": [
+        { "label": "Approach the pedestal", "nextNodeId": 13 },
+        { "label": "Turn back — this is too much", "nextNodeId": 4 }
+      ]
+    },
+    {
+      "id": 13,
+      "title": "The Pedestal",
+      "text": "You step forward and place your hand on the stone pedestal. The moment your skin touches the cold surface, everything changes.\n\nThe temple fills with light — warm, golden, alive. The tree's bark shifts, and you see that what you thought was a tree is something far older. A guardian. A keeper of stories.\n\n\"You have come,\" it speaks directly into your mind. \"The forest has been waiting for one who would listen. Will you stay and learn its secrets, or return to your world and carry only the memory?\"\n\nYou stand at the true crossroad — not of paths, but of purpose.",
+      "isStart": false,
+      "choices": [
+        { "label": "Stay and learn the secrets of the forest", "nextNodeId": 14 },
+        { "label": "Return to the village with the memory", "nextNodeId": 15 }
+      ]
+    },
+    {
+      "id": 14,
+      "title": "The Guardian's Apprentice",
+      "text": "\"So be it,\" the ancient tree-voice rumbles with approval.\n\nThe roots shift, forming a seat. The amber light grows brighter. You feel knowledge flowing into you — not as words, but as living memory. Every story the forest has ever held. Every traveler who came before you. Every ending and every beginning.\n\nYou will stay. You will learn. And one day, when another lost soul finds their way here, you will be the one waiting with a lantern and a knowing smile.\n\n— THE END —\n\nThe forest remembers. Now you do too.",
+      "isStart": false,
+      "choices": []
+    },
+    {
+      "id": 15,
+      "title": "The Return",
+      "text": "You walk out of the forest as the first light of dawn breaks through the canopy. The village is waking. Smoke rises from chimneys. Someone is baking bread.\n\nEverything looks the same, but nothing feels the same. You carry the forest with you now — its whispers, its lessons, its impossible beauty.\n\nYou never find the temple again, though you search. But sometimes, on rainy nights when the scent of wet earth fills the air, you hear the old woman's lantern rattling in the wind, and you smile.\n\nSome stories are not meant to be told — only lived.\n\n— THE END —",
+      "isStart": false,
+      "choices": []
+    }
+  ]
+}

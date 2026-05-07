@@ -1,0 +1,294 @@
+.editor-layout {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.editor-topbar {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+  padding: var(--space-sm) var(--space-md);
+  background: var(--color-bg-surface);
+  border-bottom: 1px solid var(--color-border-light);
+  flex-shrink: 0;
+  min-height: 48px;
+}
+.editor-topbar-logo {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  text-decoration: none;
+}
+.editor-topbar-logo img {
+  width: 24px;
+  height: 24px;
+}
+.editor-topbar-brand {
+  font-family: var(--font-display);
+  font-size: 15px;
+  color: var(--color-primary);
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+.editor-topbar-sep {
+  color: var(--color-text-muted);
+  font-size: 18px;
+  margin: 0 var(--space-xs);
+}
+.editor-topbar-label {
+  font-family: var(--font-display);
+  font-size: 12px;
+  color: var(--color-text-muted);
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+.editor-topbar-spacer {
+  flex: 1;
+}
+.editor-topbar-title {
+  width: 260px;
+}
+.editor-topbar .btn {
+  white-space: nowrap;
+}
+
+.editor-main {
+  display: flex;
+  flex: 1;
+  overflow: hidden;
+}
+
+.editor-sidebar {
+  width: 260px;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  border-right: 1px solid var(--color-border-light);
+  background: var(--color-bg-surface);
+}
+.editor-sidebar-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--space-md);
+  border-bottom: 1px solid var(--color-border-light);
+}
+.editor-sidebar-title {
+  font-family: var(--font-display);
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--color-text-muted);
+}
+.editor-node-list {
+  flex: 1;
+  overflow-y: auto;
+  padding: var(--space-sm);
+}
+
+.node-list-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 10px;
+  border: 1px solid transparent;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: background 120ms var(--ease-out), border-color 120ms var(--ease-out);
+  margin-bottom: 2px;
+}
+.node-list-item:hover {
+  background: var(--color-bg-raised);
+  border-color: var(--color-border-light);
+}
+.node-list-item--active {
+  background: var(--color-bg-raised);
+  border-color: var(--color-primary);
+}
+.node-list-item-header {
+  display: flex;
+  align-items: center;
+  gap: var(--space-xs);
+  overflow: hidden;
+}
+.node-list-item-id {
+  font-family: var(--font-display);
+  font-size: 12px;
+  color: var(--color-text-muted);
+  min-width: 20px;
+}
+.node-list-item-title {
+  font-family: var(--font-display);
+  font-size: 13px;
+  color: var(--color-text-main);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.node-list-item-badges {
+  display: flex;
+  gap: 4px;
+  flex-shrink: 0;
+  margin-left: var(--space-xs);
+}
+.badge {
+  font-family: var(--font-display);
+  font-size: 10px;
+  width: 18px;
+  height: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius-sm);
+}
+.badge-start {
+  color: var(--color-primary);
+  font-size: 13px;
+}
+.badge-warn {
+  color: var(--color-warning);
+  font-weight: bold;
+  font-size: 13px;
+}
+.node-list-empty {
+  font-family: var(--font-display);
+  font-size: 12px;
+  color: var(--color-text-muted);
+  text-align: center;
+  padding: var(--space-xl);
+  opacity: 0.6;
+}
+
+.editor-content {
+  flex: 1;
+  overflow-y: auto;
+  padding: var(--space-lg);
+}
+
+.edit-panel-empty {
+  font-family: var(--font-display);
+  font-size: 13px;
+  color: var(--color-text-muted);
+  text-align: center;
+  padding: var(--space-xxl);
+  opacity: 0.5;
+}
+
+.edit-panel-content {
+  max-width: 680px;
+}
+
+.edit-field {
+  margin-bottom: var(--space-lg);
+}
+
+.choices-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: var(--space-sm);
+}
+.choices-count {
+  font-family: var(--font-display);
+  font-size: 11px;
+  color: var(--color-text-muted);
+}
+.choices-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+
+.choice-row {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  padding: var(--space-sm);
+  background: var(--color-bg-raised);
+  border: 1px solid var(--color-border-light);
+  border-radius: var(--radius-sm);
+  transition: border-color 180ms var(--ease-out);
+}
+.choice-row--unlinked {
+  border-color: var(--color-warning);
+}
+.choice-fields {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+}
+.choice-label-input {
+  font-size: 13px !important;
+  padding: 6px 10px !important;
+}
+.choice-dest-select {
+  font-size: 12px !important;
+}
+
+.no-choices {
+  font-family: var(--font-display);
+  font-size: 12px;
+  color: var(--color-text-muted);
+  padding: var(--space-sm);
+  opacity: 0.6;
+}
+
+.edit-footer {
+  display: flex;
+  justify-content: space-between;
+  gap: var(--space-sm);
+}
+
+.editor-statusbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 4px var(--space-md);
+  background: var(--color-bg-surface);
+  border-top: 1px solid var(--color-border-light);
+  font-family: var(--font-display);
+  font-size: 11px;
+  color: var(--color-text-muted);
+  flex-shrink: 0;
+  min-height: 28px;
+}
+.editor-statusbar-warnings {
+  color: var(--color-warning);
+}
+
+.hidden-file-input {
+  display: none;
+}
+
+.confirm-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(28, 20, 16, 0.85);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+}
+.confirm-dialog {
+  background: var(--color-bg-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: var(--space-lg);
+  max-width: 400px;
+  width: 90%;
+}
+.confirm-dialog p {
+  font-family: var(--font-body);
+  font-size: 14px;
+  margin-bottom: var(--space-lg);
+  line-height: 1.6;
+  white-space: pre-line;
+}
+.confirm-dialog-actions {
+  display: flex;
+  gap: var(--space-sm);
+  justify-content: flex-end;
+}
