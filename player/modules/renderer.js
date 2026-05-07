@@ -33,9 +33,12 @@ export function renderGameScreen(node, allNodes, flags) {
   const isEnd = availableChoices.length === 0;
 
   const choicesHTML = availableChoices.map((choice, i) => {
+    const letter = String.fromCharCode(65 + i);
     return `
       <button class="choice-btn" data-choice-index="${i}" data-next-id="${choice.nextNodeId ?? ''}" data-set-flag="${escapeHTML(choice.setFlag || '')}" data-unset-flag="${escapeHTML(choice.unsetFlag || '')}">
+        <span class="choice-prefix">${letter}.</span>
         <span class="choice-label">${escapeHTML(choice.label)}</span>
+        <span class="choice-arrow">&rarr;</span>
       </button>`;
   }).join('');
 

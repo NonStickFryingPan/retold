@@ -171,14 +171,28 @@
 .choice-label {
   flex: 1;
 }
-.choice-dest {
-  font-size: 11px;
-  color: var(--color-text-muted);
-  font-style: italic;
+.choice-prefix {
+  color: var(--color-primary);
+  font-family: var(--font-display);
+  font-size: 13px;
+  margin-right: 10px;
+  min-width: 22px;
+  opacity: 0.8;
 }
-.choice-btn:active .choice-dest {
+.choice-arrow {
+  color: var(--color-text-muted);
+  font-size: 14px;
+  opacity: 0;
+  transform: translateX(-6px);
+  transition: opacity 120ms var(--ease-out), transform 160ms var(--ease-out);
+}
+.choice-btn:hover .choice-arrow {
+  opacity: 1;
+  transform: translateX(0);
+  color: var(--color-primary);
+}
+.choice-btn:active .choice-arrow {
   color: var(--color-bg-dark);
-  opacity: 0.7;
 }
 .end-marker {
   padding: 16px;
