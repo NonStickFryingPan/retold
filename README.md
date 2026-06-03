@@ -23,6 +23,9 @@ Retold is a browser-based platform for creating and playing branching text adven
 
 Think Twine, but with a brass-and-amber steampunk aesthetic.
 
+<img width="800" alt="image" src="https://github.com/user-attachments/assets/48dd603a-d730-4e9a-8608-c269c86d453b" />
+
+
 ---
 
 ## Story Editor
@@ -38,20 +41,6 @@ Build stories visually:
 - **Auto-save** to localStorage on every change
 - **Export / Import** story JSON
 - **Validation** — warns about unlinked choices, missing start nodes
-
-```
-┌─────────────────────────────────────────────────────┐
-│  [R] RETOLD — Editor    [Story Title]    [Export]   │
-├──────────────┬──────────────────────────────────────┤
-│ NODES        │ EDIT PANEL                           │
-│ [+ Add Node] │ Title: [_______________]             │
-│ ──────────── │ [★] Mark as start node              │
-│ 1. Start  ★  │ Story Text: [_______________]       │
-│ 2. Cave      │ Choices:                            │
-│ 3. Mill   !  │ [Go left] → [2. Cave]               │
-│              │ [+ Add Choice]                       │
-└──────────────┴──────────────────────────────────────┘
-```
 
 ---
 
