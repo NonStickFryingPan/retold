@@ -10,6 +10,8 @@
 
 [Editor](#story-editor) · [Player](#story-player) · [Run It](#run-it) · [JSON Format](#story-json)
 
+<img width="800" alt="image" src="https://github.com/user-attachments/assets/48dd603a-d730-4e9a-8608-c269c86d453b" />
+
 </div>
 
 ---
@@ -17,62 +19,6 @@
 ## What is Retold?
 
 Retold is a browser-based platform for creating and playing branching text adventures. Two modules, one JSON contract, zero external dependencies.
-
-- **Story Editor** — author branching stories with nodes, prose, and choices. Export as JSON.
-- **Story Player** — load a story and play through it. Progress saves automatically.
-
-Think Twine, but with a brass-and-amber steampunk aesthetic.
-
-<img width="800" alt="image" src="https://github.com/user-attachments/assets/48dd603a-d730-4e9a-8608-c269c86d453b" />
-
-
----
-
-## Story Editor
-
-> `editor/editor.html`
-
-Build stories visually:
-
-- **Add, delete, duplicate** story nodes
-- **Write prose** for each scene
-- **Link choices** to other nodes with a dropdown
-- **Mark a start node** — the player begins here
-- **Auto-save** to localStorage on every change
-- **Export / Import** story JSON
-- **Validation** — warns about unlinked choices, missing start nodes
-
----
-
-## Story Player
-
-> `player/player.html`
-
-Play through any story:
-
-- **Load** a story JSON file
-- **Read** scene text rendered in a warm serif typeface
-- **Choose** from available choices — click to advance
-- **Endings** are detected automatically (nodes with no choices)
-- **Auto-save** — close the tab, reopen, resume exactly where you left off
-
-```
-┌────────────────────────────────┐
-│  [R] Forest of Echoes  [Menu]  │
-│  ───────────────────────────   │
-│  You stand at a fork in the    │
-│  road. Rain drips through the  │
-│  canopy above.                 │
-│                                │
-│  ┌──────────────────────────┐  │
-│  │  > Go left               │  │
-│  ├──────────────────────────┤  │
-│  │  > Go right              │  │
-│  ├──────────────────────────┤  │
-│  │  > Turn back             │  │
-│  └──────────────────────────┘  │
-└────────────────────────────────┘
-```
 
 ---
 
@@ -145,36 +91,3 @@ A node with no choices (or all choices unlinked) is treated as an **ending**.
 | Dependencies | Zero |
 
 ---
-
-## Structure
-
-```
-retold/
-├── index.html              ← App shell, links to editor + player
-├── editor/
-│   ├── editor.html / css / js
-│   └── modules/
-│       ├── state.js         ← Centralized data store
-│       ├── nodeManager.js   ← Add, delete, duplicate nodes
-│       ├── choiceManager.js ← Add, delete, update choices
-│       ├── renderer.js      ← Pure render functions
-│       ├── storage.js       ← localStorage save/load
-│       ├── io.js            ← Export/import JSON
-│       └── validate.js      ← Story validation
-├── player/
-│   ├── player.html / css / js
-│   └── modules/
-│       ├── state.js         ← Player state (current node, flags, history)
-│       ├── engine.js        ← goToNode, handleChoice, applyFlags
-│       ├── renderer.js      ← renderScene, renderChoices
-│       ├── saves.js         ← Save slots, localStorage
-│       └── loader.js        ← Load/validate story JSON
-├── shared/
-│   ├── theme.css            ← CSS variables + base styles
-│   ├── components.css       ← Reusable UI (buttons, inputs, panels)
-│   └── utils.js             ← Shared helpers
-├── stories/
-│   └── example-story.json   ← "Forest of Echoes" — 15 nodes, 3 endings
-└── assets/
-    └── logo.svg             ← Pixelated R
-```
