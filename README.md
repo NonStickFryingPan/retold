@@ -8,7 +8,7 @@
 [![ES Modules](https://img.shields.io/badge/modules-ES6-blue?style=flat-square)]()
 [![Storage](https://img.shields.io/badge/storage-localStorage-orange?style=flat-square)]()
 
-[Editor](#story-editor) · [Player](#story-player) · [Run It](#run-it) · [JSON Format](#story-json)
+[Run It](#run-it) · [JSON Format](#story-json)
 
 <img width="800" alt="image" src="https://github.com/user-attachments/assets/48dd603a-d730-4e9a-8608-c269c86d453b" />
 
